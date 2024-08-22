@@ -400,6 +400,11 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Watch Trailer"/>
+                                <connections>
+                                    <segue destination="lMm-KV-CRc" kind="popoverPresentation" popoverAnchorView="T3S-yc-t35" id="VTA-lG-3h6">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qt4-jt-mrn"/>
@@ -448,6 +453,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f22-rK-Qnn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85.507246376811594" y="-721.20535714285711"/>
+        </scene>
+        <!--Webview Controller-->
+        <scene sceneID="I1X-5K-Sh3">
+            <objects>
+                <viewController storyboardIdentifier="WebviewController" id="lMm-KV-CRc" customClass="WebviewController" customModule="MovieList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CfB-Qy-6hl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAZ-zi-AeH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="FCG-Nf-7sJ"/>
+                                    <constraint firstAttribute="width" constant="414" id="ozR-hO-Nz5"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="awy-BG-f1f"/>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MAZ-zi-AeH" firstAttribute="leading" secondItem="awy-BG-f1f" secondAttribute="leading" id="6Hy-Hg-XI9"/>
+                            <constraint firstItem="MAZ-zi-AeH" firstAttribute="top" secondItem="awy-BG-f1f" secondAttribute="top" id="fS5-Tv-QPC"/>
+                            <constraint firstItem="MAZ-zi-AeH" firstAttribute="trailing" secondItem="awy-BG-f1f" secondAttribute="trailing" id="k4m-fd-eQY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="MAZ-zi-AeH" id="gV7-wa-h1s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S7R-mz-5Af" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="-721.20535714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cDw-bm-Tve">
