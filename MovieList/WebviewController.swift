@@ -11,8 +11,21 @@ import WebKit
 
 class WebviewController:UIViewController {
     @IBOutlet var webView:WKWebView!
+    var selectedMovideIndex:Int = 0
+    var selectedMovie:Movie!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("selected movie index\(selectedMovideIndex)")
+        selectedMovie = movieList[selectedMovideIndex]
+        loadYoutube(videoURL: selectedMovie.trailer)
+        print("trailer url: " + selectedMovie.trailer)
+    }
+    
+    func loadYoutube(videoURL:String){
+        if let youtubeURL = URL(string: videoURL) {
+            webView.load(URLRequest(url:youtubeURL))
+        }
+        else{return}
     }
 }

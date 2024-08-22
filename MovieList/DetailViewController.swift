@@ -10,6 +10,15 @@ import UIKit
 
 class DetailViewController:UIViewController {
     var selectedIndex:Int = 0
+    
+    @IBAction func movieStartButtonTap2(_ sender: Any) {
+        loadWebView()
+    }
+    @IBAction func movieStartButtonTap1(_ sender: Any) {
+        loadWebView()
+    }
+    @IBOutlet weak var movieStartButton: UIButton!
+    @IBOutlet weak var movieStartButton2: UIButton!
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet var movieName:UILabel!
     @IBOutlet var duration:UILabel!
@@ -48,4 +57,15 @@ class DetailViewController:UIViewController {
         }
         
     }
-}
+    
+    func loadWebView() {
+        
+            let storyBoard = UIStoryboard(name:"Main", bundle: nil)
+            let webViewController:WebviewController = storyBoard.instantiateViewController(withIdentifier: "WebviewController") as! WebviewController
+            
+            webViewController.selectedMovideIndex = selectedIndex
+            webViewController.modalPresentationStyle = .popover
+            self.present(webViewController, animated: true)
+        }
+    }
+
