@@ -303,6 +303,9 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="37"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="movieStartButtonTap1:" destination="GCo-Er-wys" eventType="touchUpInside" id="Zuf-5j-afN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -401,9 +404,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Watch Trailer"/>
                                 <connections>
-                                    <segue destination="lMm-KV-CRc" kind="popoverPresentation" popoverAnchorView="T3S-yc-t35" id="VTA-lG-3h6">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="movieStartButtonTap1:" destination="GCo-Er-wys" eventType="touchUpInside" id="HvG-68-Bw6"/>
+                                    <action selector="movieStartButtonTap2:" destination="GCo-Er-wys" eventType="touchUpInside" id="nHT-dn-1Wv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -446,6 +448,8 @@
                         <outlet property="genre" destination="9ye-Hw-Z4K" id="6fI-1q-j5C"/>
                         <outlet property="movieImageView" destination="FlX-vA-2Vo" id="STJ-tR-rSk"/>
                         <outlet property="movieName" destination="obG-Ly-vqp" id="lp8-D5-zt3"/>
+                        <outlet property="movieStartButton" destination="nJ1-p5-lVh" id="h8W-MF-okE"/>
+                        <outlet property="movieStartButton2" destination="T3S-yc-t35" id="IkZ-MN-aL8"/>
                         <outlet property="ratingLabel" destination="cxb-mP-bli" id="uAs-5E-Cp6"/>
                         <outlet property="releaseDate" destination="f3C-nY-SEc" id="o2d-E8-c1x"/>
                     </connections>
@@ -459,11 +463,11 @@
             <objects>
                 <viewController storyboardIdentifier="WebviewController" id="lMm-KV-CRc" customClass="WebviewController" customModule="MovieList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CfB-Qy-6hl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAZ-zi-AeH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="248"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="248" id="FCG-Nf-7sJ"/>
@@ -474,9 +478,19 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwC-jL-1kA">
+                                <rect key="frame" x="375" y="16" width="33" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="x"/>
+                                <connections>
+                                    <action selector="closeActionButton:" destination="lMm-KV-CRc" eventType="touchUpInside" id="qz6-4S-6OR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="awy-BG-f1f"/>
-                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.086274504660000001" green="0.078431375319999996" blue="0.1176470518" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="MAZ-zi-AeH" firstAttribute="leading" secondItem="awy-BG-f1f" secondAttribute="leading" id="6Hy-Hg-XI9"/>
                             <constraint firstItem="MAZ-zi-AeH" firstAttribute="top" secondItem="awy-BG-f1f" secondAttribute="top" id="fS5-Tv-QPC"/>
