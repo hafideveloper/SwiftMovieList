@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         myCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         if let flowLayout =  myCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.scrollDirection = .horizontal
-            
+             
         }
         
         guard let url = URL(string: "https://api.themoviedb.org/3/trending/movie/day")
