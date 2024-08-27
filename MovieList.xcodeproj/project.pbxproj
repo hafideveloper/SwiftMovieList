@@ -16,6 +16,7 @@
 		F5C437972C64B70D001FED71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C437952C64B70D001FED71 /* Main.storyboard */; };
 		F5C437992C64B70D001FED71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C437982C64B70D001FED71 /* Assets.xcassets */; };
 		F5C4379C2C64B70D001FED71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C4379A2C64B70D001FED71 /* LaunchScreen.storyboard */; };
+		F5D2A5E12C7DF09F0081F1A7 /* TrendingMoviesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2A5E02C7DF09F0081F1A7 /* TrendingMoviesResponseModel.swift */; };
 		F5FA19F22C772D0D00C82005 /* WebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FA19F12C772D0D00C82005 /* WebviewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		F5C437982C64B70D001FED71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5C4379B2C64B70D001FED71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5C4379D2C64B70D001FED71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5D2A5E02C7DF09F0081F1A7 /* TrendingMoviesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMoviesResponseModel.swift; sourceTree = "<group>"; };
 		F5FA19F12C772D0D00C82005 /* WebviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				F5FA19F12C772D0D00C82005 /* WebviewController.swift */,
 				F5BA0EA82C74B47C001FF330 /* MovieCollectionViewCell.swift */,
 				F5BA0EA62C74914E001FF330 /* MovieListModel.swift */,
+				F5D2A5E02C7DF09F0081F1A7 /* TrendingMoviesResponseModel.swift */,
 				F5C437982C64B70D001FED71 /* Assets.xcassets */,
 				F5C4379A2C64B70D001FED71 /* LaunchScreen.storyboard */,
 				F5C4379D2C64B70D001FED71 /* Info.plist */,
@@ -156,6 +159,7 @@
 				F5FA19F22C772D0D00C82005 /* WebviewController.swift in Sources */,
 				F5BA0EAB2C75DA38001FF330 /* DetailViewController.swift in Sources */,
 				F5C437902C64B70D001FED71 /* AppDelegate.swift in Sources */,
+				F5D2A5E12C7DF09F0081F1A7 /* TrendingMoviesResponseModel.swift in Sources */,
 				F5C437922C64B70D001FED71 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
